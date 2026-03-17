@@ -3,159 +3,590 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Korawit Insoi — Technical Lead / Solution Architect</title>
+  <title>Korawit Insoi | Technical Lead / Solution Architect</title>
+  <meta
+    name="description"
+    content="Korawit Insoi — Technical Lead / Solution Architect with 12+ years of experience designing and delivering scalable business systems across backend, frontend, database, mobile, and automation."
+  />
   <style>
     :root {
-      --bg: #0f1115;
-      --card: #171a21;
-      --text: #e8ecf1;
-      --muted: #a7b0bf;
-      --accent: #c6a667;
-      --line: #2b313d;
+      --bg: #0b0f14;
+      --panel: #121821;
+      --panel-2: #171f2b;
+      --text: #eef2f7;
+      --muted: #aab4c3;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #d7b56d;
+      --accent-soft: rgba(215, 181, 109, 0.12);
+      --max: 1120px;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
     }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top right, rgba(215,181,109,0.12), transparent 24%),
+        radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 18%),
+        var(--bg);
       color: var(--text);
       line-height: 1.65;
     }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
     .wrap {
-      max-width: 980px;
+      width: min(100% - 32px, var(--max));
       margin: 0 auto;
-      padding: 48px 24px 80px;
     }
-    .hero {
-      display: grid;
-      gap: 14px;
-      padding: 28px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(198,166,103,.08), rgba(255,255,255,.02));
-      border-radius: 24px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.2);
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(11, 15, 20, 0.75);
+      border-bottom: 1px solid var(--line);
     }
-    h1, h2, h3 { margin: 0; }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 1.3rem; margin-bottom: 16px; }
-    .role { color: var(--accent); font-weight: 700; }
-    .lead { color: var(--muted); max-width: 760px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .navlinks {
+      display: flex;
       gap: 18px;
-      margin-top: 28px;
+      flex-wrap: wrap;
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 22px;
-    }
-    .section { margin-top: 30px; }
-    ul { margin: 0; padding-left: 18px; }
-    li + li { margin-top: 8px; }
-    .project + .project { margin-top: 18px; }
-    .muted { color: var(--muted); }
-    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip {
-      border: 1px solid var(--line);
-      background: #12151b;
-      border-radius: 999px;
-      padding: 8px 12px;
+
+    .navlinks a {
       color: var(--muted);
-      font-size: .95rem;
+      font-size: 14px;
     }
-    a { color: var(--accent); text-decoration: none; }
-    footer { margin-top: 34px; color: var(--muted); font-size: .95rem; }
+
+    .navlinks a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 84px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .card {
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(215, 181, 109, 0.25);
+      color: #f1ddaf;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .role {
+      font-size: clamp(18px, 2.4vw, 24px);
+      color: var(--accent);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .lead {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #151515;
+      border-color: transparent;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-1px);
+    }
+
+    .side-card {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .mini-label {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .stat {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    section {
+      padding: 18px 0 8px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 12px;
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 18px;
+      margin: 10px 0;
+      color: var(--muted);
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 12px;
+    }
+
+    .project {
+      padding: 26px;
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .project h4 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .project p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .contact {
+      margin-top: 18px;
+      padding-bottom: 80px;
+    }
+
+    .contact-box {
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(215,181,109,0.09), rgba(255,255,255,0.02));
+      border: 1px solid rgba(215, 181, 109, 0.22);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+
+    .contact-box p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .contact-links a {
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .contact-links a:hover {
+      background: rgba(255,255,255,0.07);
+    }
+
+    footer {
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .grid-2,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-card,
+      .side-card,
+      .card,
+      .project,
+      .contact-box {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navlinks {
+        gap: 12px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <h1>Korawit Insoi</h1>
-      <div class="role">Technical Lead / Solution Architect</div>
-      <p class="lead">
-        Hands-on software engineer with 12+ years of experience building scalable business systems across backend, frontend, database, mobile, and automation.
-        I specialize in turning business requirements into practical, secure, and production-ready solutions.
-      </p>
-      <div>
-        <a href="#projects">Projects</a> ·
-        <a href="#skills">Skills</a> ·
+  <div class="topbar">
+    <div class="wrap nav">
+      <div class="brand">Korawit <span>Insoi</span></div>
+      <div class="navlinks">
+        <a href="#value">Value</a>
+        <a href="#projects">Projects</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#contact">Contact</a>
       </div>
-    </section>
-
-    <section class="section grid">
-      <div class="card">
-        <h2>What I Do</h2>
-        <ul>
-          <li>Design system architecture and technical foundations</li>
-          <li>Build end-to-end web, backend, and mobile solutions</li>
-          <li>Optimize database performance and production workflows</li>
-          <li>Lead delivery from requirement to deployment</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Current Focus</h2>
-        <ul>
-          <li>Technical leadership and architecture</li>
-          <li>Business applications and reporting systems</li>
-          <li>iOS product development with SwiftUI</li>
-          <li>Automation and developer productivity tooling</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="section card">
-      <h2>Selected Projects</h2>
-
-      <div class="project">
-        <h3>Stock Reporter / Business Reporting Platform</h3>
-        <p class="muted">Business reporting system covering API, database, authentication, reporting workflows, and frontend delivery.</p>
-      </div>
-
-      <div class="project">
-        <h3>GoThai Travel App</h3>
-        <p class="muted">iOS/iPadOS travel application with map-based tracking, trip planning, summaries, and local data persistence.</p>
-      </div>
-
-      <div class="project">
-        <h3>Rally / Event Tracking Platform</h3>
-        <p class="muted">Concept and product design for route setup, GPS tracking, stage management, and real-time participant visibility.</p>
-      </div>
-    </section>
-
-    <section id="skills" class="section card">
-      <h2>Core Skills</h2>
-      <div class="chips">
-        <span class="chip">C#</span>
-        <span class="chip">.NET</span>
-        <span class="chip">Node.js</span>
-        <span class="chip">TypeScript</span>
-        <span class="chip">Next.js</span>
-        <span class="chip">SQL Server</span>
-        <span class="chip">SwiftUI</span>
-        <span class="chip">System Architecture</span>
-        <span class="chip">REST APIs</span>
-        <span class="chip">Performance Optimization</span>
-        <span class="chip">Automation</span>
-      </div>
-    </section>
-
-    <section id="contact" class="section card">
-      <h2>Contact</h2>
-      <p class="muted">Replace these placeholders before publishing.</p>
-      <ul>
-        <li>Email: your-email@example.com</li>
-        <li>LinkedIn: linkedin.com/in/your-profile</li>
-        <li>GitHub: github.com/your-username</li>
-      </ul>
-    </section>
-
-    <footer>
-      Built for GitHub Pages. Keep it sharp, keep it honest, keep it readable.
-    </footer>
+    </div>
   </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Technical Leadership • Architecture • Delivery</div>
+          <h1>Korawit Insoi</h1>
+          <div class="role">Technical Lead / Solution Architect</div>
+          <p class="lead">
+            I design and deliver scalable digital systems that turn business requirements into secure,
+            maintainable, and production-ready products. With 12+ years of experience across backend,
+            frontend, database, mobile, and automation, I bring both architectural depth and hands-on execution.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Selected Work</a>
+            <a class="btn btn-secondary" href="mailto:YOUR_EMAIL">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-card side-card">
+          <div class="mini-label">Professional Snapshot</div>
+
+          <div class="stat">
+            <strong>12+ Years</strong>
+            <span>Building business systems, platforms, and production-ready applications since 2013.</span>
+          </div>
+
+          <div class="stat">
+            <strong>End-to-End Ownership</strong>
+            <span>From solution design and technical architecture to implementation, optimization, and delivery.</span>
+          </div>
+
+          <div class="stat">
+            <strong>Cross-Stack Strength</strong>
+            <span>Backend, frontend, database, mobile, integration, and engineering automation.</span>
+          </div>
+
+          <div class="stat">
+            <strong>Leadership Style</strong>
+            <span>Hands-on, practical, and focused on systems that work well beyond the whiteboard.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="value">
+      <div class="section-title">Value Proposition</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>What I Deliver</h3>
+          <ul class="list">
+            <li>Architecture and technical foundations for scalable business systems</li>
+            <li>End-to-end product delivery across web, backend, database, and mobile</li>
+            <li>Performance-focused systems designed for reliability and maintainability</li>
+            <li>Hands-on leadership from solution design to production deployment</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Focus Areas</h3>
+          <ul class="list">
+            <li>Technical leadership, architecture, and scalable system design</li>
+            <li>Business platforms, reporting workflows, and operational software</li>
+            <li>Product-focused mobile development with SwiftUI</li>
+            <li>Automation, internal tooling, and engineering productivity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">Selected Projects</div>
+      <div class="projects">
+        <article class="project">
+          <h4>Stock Reporter / Business Operations Platform</h4>
+          <p>
+            Designed and delivered a business reporting platform covering API architecture, database workflows,
+            authentication, reporting processes, and frontend experience for operational reporting and decision support.
+          </p>
+          <div class="tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Architecture</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <h4>GoThai / iOS Travel Product</h4>
+          <p>
+            Built a map-driven iOS/iPadOS travel application for trip planning, route visualization, summaries,
+            and local-first data management with a product-focused user experience.
+          </p>
+          <div class="tags">
+            <span class="tag">SwiftUI</span>
+            <span class="tag">SwiftData</span>
+            <span class="tag">MapKit</span>
+            <span class="tag">Product Design</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <h4>Rally / Event Tracking Platform</h4>
+          <p>
+            Created the product and system concept for an event tracking platform supporting route setup,
+            GPS visibility, stage management, and real-time participant monitoring.
+          </p>
+          <div class="tags">
+            <span class="tag">GPS Tracking</span>
+            <span class="tag">Realtime Systems</span>
+            <span class="tag">Product Strategy</span>
+            <span class="tag">System Design</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities">
+      <div class="section-title">Core Capabilities</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Technical Depth</h3>
+          <p>
+            Strong experience across backend engineering, API development, frontend applications,
+            relational databases, mobile applications, and solution architecture with a practical approach to delivery.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Execution Mindset</h3>
+          <p>
+            Comfortable working from business requirement to production deployment, balancing system design,
+            implementation detail, performance, maintainability, and real-world usability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact-box">
+        <h3>Open to selected technical leadership and architecture opportunities.</h3>
+        <p>
+          I am available for leadership, architecture, product engineering, and consulting discussions
+          where technical depth, hands-on execution, and delivery ownership are valued.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:YOUR_EMAIL">Email: YOUR_EMAIL</a>
+          <a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://YOUR_GITHUB_USERNAME.github.io" target="_blank" rel="noreferrer">Portfolio Site</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© Korawit Insoi. All rights reserved.</div>
+  </footer>
 </body>
 </html>
