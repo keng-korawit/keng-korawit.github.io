@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Korawit Insoi — Technical Lead / Solution Architect</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #171a21;
+      --text: #e8ecf1;
+      --muted: #a7b0bf;
+      --accent: #c6a667;
+      --line: #2b313d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .hero {
+      display: grid;
+      gap: 14px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(198,166,103,.08), rgba(255,255,255,.02));
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    }
+    h1, h2, h3 { margin: 0; }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.3rem; margin-bottom: 16px; }
+    .role { color: var(--accent); font-weight: 700; }
+    .lead { color: var(--muted); max-width: 760px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+    .section { margin-top: 30px; }
+    ul { margin: 0; padding-left: 18px; }
+    li + li { margin-top: 8px; }
+    .project + .project { margin-top: 18px; }
+    .muted { color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: #12151b;
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    footer { margin-top: 34px; color: var(--muted); font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Korawit Insoi</h1>
+      <div class="role">Technical Lead / Solution Architect</div>
+      <p class="lead">
+        Hands-on software engineer with 12+ years of experience building scalable business systems across backend, frontend, database, mobile, and automation.
+        I specialize in turning business requirements into practical, secure, and production-ready solutions.
+      </p>
+      <div>
+        <a href="#projects">Projects</a> ·
+        <a href="#skills">Skills</a> ·
+        <a href="#contact">Contact</a>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <div class="card">
+        <h2>What I Do</h2>
+        <ul>
+          <li>Design system architecture and technical foundations</li>
+          <li>Build end-to-end web, backend, and mobile solutions</li>
+          <li>Optimize database performance and production workflows</li>
+          <li>Lead delivery from requirement to deployment</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Current Focus</h2>
+        <ul>
+          <li>Technical leadership and architecture</li>
+          <li>Business applications and reporting systems</li>
+          <li>iOS product development with SwiftUI</li>
+          <li>Automation and developer productivity tooling</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section card">
+      <h2>Selected Projects</h2>
+
+      <div class="project">
+        <h3>Stock Reporter / Business Reporting Platform</h3>
+        <p class="muted">Business reporting system covering API, database, authentication, reporting workflows, and frontend delivery.</p>
+      </div>
+
+      <div class="project">
+        <h3>GoThai Travel App</h3>
+        <p class="muted">iOS/iPadOS travel application with map-based tracking, trip planning, summaries, and local data persistence.</p>
+      </div>
+
+      <div class="project">
+        <h3>Rally / Event Tracking Platform</h3>
+        <p class="muted">Concept and product design for route setup, GPS tracking, stage management, and real-time participant visibility.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section card">
+      <h2>Core Skills</h2>
+      <div class="chips">
+        <span class="chip">C#</span>
+        <span class="chip">.NET</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">Next.js</span>
+        <span class="chip">SQL Server</span>
+        <span class="chip">SwiftUI</span>
+        <span class="chip">System Architecture</span>
+        <span class="chip">REST APIs</span>
+        <span class="chip">Performance Optimization</span>
+        <span class="chip">Automation</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <p class="muted">Replace these placeholders before publishing.</p>
+      <ul>
+        <li>Email: your-email@example.com</li>
+        <li>LinkedIn: linkedin.com/in/your-profile</li>
+        <li>GitHub: github.com/your-username</li>
+      </ul>
+    </section>
+
+    <footer>
+      Built for GitHub Pages. Keep it sharp, keep it honest, keep it readable.
+    </footer>
+  </div>
+</body>
+</html>
