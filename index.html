@@ -1,291 +1,576 @@
 <!DOCTYPE html>
 <html lang="th" class="lang-th">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Korawit Insoi | Technical Lead / Solution Architect</title>
   <meta name="description" content="Bilingual portfolio for Korawit Insoi — Technical Lead / Solution Architect." />
   <style>
-    :root{
-      --ink:#1f2630;
-      --muted:#5b6572;
-      --line:#d7dde6;
-      --navy:#11283e;
-      --navy2:#183754;
-      --gold:#b48a3c;
-      --gold-soft:#f2efe8;
-      --soft:#f7f8fa;
-      --paper:#ffffff;
-      --bg:#edf1f5;
-      --shadow:0 14px 36px rgba(17,24,39,.10);
-      --radius:22px;
-      --max:1180px;
+    :root {
+      --ink: #1f2630;
+      --muted: #5b6572;
+      --line: #d7dde6;
+      --navy: #11283e;
+      --navy2: #183754;
+      --gold: #b48a3c;
+      --gold-soft: #f2efe8;
+      --soft: #f7f8fa;
+      --paper: #ffffff;
+      --bg: #edf1f5;
+      --shadow: 0 14px 36px rgba(17, 24, 39, .10);
+      --radius: 22px;
+      --max: 1180px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-      font-family:"Noto Sans Thai","Noto Sans","DejaVu Sans",Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+    * {
+      box-sizing: border-box
     }
 
-    a{color:inherit;text-decoration:none}
-
-    .ribbon{height:14px;background:linear-gradient(90deg,var(--navy),var(--navy2));}
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:30;
-      background:rgba(237,241,245,.86);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(17,40,62,.08);
+    html {
+      scroll-behavior: smooth
     }
 
-    .wrap{width:min(100% - 32px, var(--max));margin:0 auto}
-
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:14px 0;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Noto Sans Thai", "Noto Sans", "DejaVu Sans", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility
     }
 
-    .brand{font-weight:800;letter-spacing:.2px;color:var(--navy)}
-    .brand span{color:var(--gold)}
-
-    .nav-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end}
-    .navlinks{display:flex;gap:16px;flex-wrap:wrap}
-    .navlinks a{font-size:14px;color:var(--muted);font-weight:600}
-    .navlinks a:hover{color:var(--navy2)}
-
-    .lang-switch{
-      display:inline-flex;
-      padding:4px;
-      gap:4px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:#fff;
-      box-shadow:var(--shadow);
+    a {
+      color: inherit;
+      text-decoration: none
     }
 
-    .lang-btn{
-      border:0;
-      background:transparent;
-      color:var(--muted);
-      padding:8px 12px;
-      border-radius:999px;
-      cursor:pointer;
-      font-weight:800;
-      transition:.2s ease;
+    .ribbon {
+      height: 14px;
+      background: linear-gradient(90deg, var(--navy), var(--navy2));
     }
 
-    .lang-btn.active{background:var(--navy);color:#fff}
-
-    .hero{padding:38px 0 24px}
-    .hero-grid{display:grid;grid-template-columns:1.45fr .95fr;gap:22px;align-items:stretch}
-
-    .paper{
-      background:var(--paper);
-      border:1px solid #e1e7ee;
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(237, 241, 245, .86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(17, 40, 62, .08)
     }
 
-    .hero-card{padding:0}
-    .hero-head{height:12px;background:linear-gradient(90deg,var(--navy),var(--navy2));}
-    .hero-body{padding:34px 34px 30px}
-
-    .eyebrow{
-      display:inline-block;
-      padding:7px 12px;
-      border-radius:999px;
-      background:var(--gold-soft);
-      color:#7a5b1a;
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:.9px;
-      text-transform:uppercase;
-      margin-bottom:16px;
+    .wrap {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto
     }
 
-    h1{
-      margin:0 0 8px;
-      font-size:clamp(38px,6vw,66px);
-      line-height:.98;
-      letter-spacing:-.035em;
-      color:var(--ink);
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0
     }
 
-    .subtitle{
-      margin:0 0 16px;
-      font-size:22px;
-      line-height:1.25;
-      color:var(--navy2);
-      font-weight:800;
+    .brand {
+      font-weight: 800;
+      letter-spacing: .2px;
+      color: var(--navy)
     }
 
-    .lead{
-      margin:0;
-      color:var(--muted);
-      font-size:17px;
-      line-height:1.72;
-      max-width:780px;
+    .brand span {
+      color: var(--gold)
     }
 
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 18px;
-      border-radius:14px;
-      font-weight:800;
-      transition:.2s ease;
-      border:1px solid transparent;
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end
     }
 
-    .btn-primary{background:linear-gradient(90deg,var(--navy),var(--navy2));color:#fff}
-    .btn-primary:hover{transform:translateY(-1px)}
-    .btn-secondary{background:#fff;border-color:var(--line);color:var(--navy)}
-    .btn-secondary:hover{background:var(--soft)}
-
-    .side-card{padding:26px 26px 24px;display:flex;flex-direction:column;gap:16px}
-    .mini-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7a8592;font-weight:800}
-
-    .stat{
-      padding:14px 0;
-      border-bottom:1px solid #e6ebf2;
-    }
-    .stat:last-child{border-bottom:0;padding-bottom:0}
-    .stat strong{display:block;font-size:24px;line-height:1.05;margin-bottom:6px;color:var(--navy)}
-    .stat span{display:block;font-size:14px;line-height:1.55;color:var(--muted)}
-
-    section{padding:14px 0}
-    .section-title{
-      display:flex;align-items:center;gap:10px;
-      margin:0 0 14px;
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:1.5px;
-      color:var(--navy);
-      font-weight:800;
-    }
-    .section-title::before{
-      content:"";
-      width:36px;height:2px;border-radius:999px;background:var(--gold);
+    .navlinks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap
     }
 
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-
-    .card{padding:24px 24px 22px}
-    .card h3{margin:0 0 12px;font-size:24px;line-height:1.2;color:var(--ink)}
-    .card p{margin:0;color:var(--muted);line-height:1.68}
-
-    .list{margin:12px 0 0;padding:0;list-style:none}
-    .list li{position:relative;padding-left:18px;margin:10px 0;color:#334155;line-height:1.62}
-    .list li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:999px;background:var(--gold)}
-
-    .project{padding:0}
-    .project-body{padding:24px}
-    .project h4{margin:0 0 10px;font-size:20px;line-height:1.25;color:var(--ink)}
-    .project p{margin:0 0 16px;color:var(--muted);line-height:1.68}
-    .tags{display:flex;flex-wrap:wrap;gap:8px}
-    .tag{
-      display:inline-flex;
-      padding:7px 10px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid var(--line);
-      color:#344256;
-      font-size:12px;
-      font-weight:700;
+    .navlinks a {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600
     }
 
-    .callout{
-      background:#f8fafc;
-      border:1px solid #e2e8f0;
-      border-radius:18px;
-      padding:22px 24px;
-    }
-    .callout p{margin:0 0 10px;color:#334155;line-height:1.68}
-    .callout p:last-child{margin-bottom:0}
-
-    .contact-box{
-      padding:30px;
-      background:linear-gradient(180deg,#fff,#f8fafc);
-      border:1px solid #dfe5ec;
-      border-radius:24px;
-      box-shadow:var(--shadow);
-    }
-    .contact-box h3{margin:0 0 10px;font-size:28px;line-height:1.2;color:var(--navy)}
-    .contact-box p{margin:0 0 18px;color:var(--muted);line-height:1.7;max-width:820px}
-    .contact-links{display:flex;flex-wrap:wrap;gap:12px}
-    .contact-links a{
-      padding:12px 14px;
-      border-radius:12px;
-      background:#fff;
-      border:1px solid var(--line);
-      font-size:14px;
-      font-weight:700;
-      color:var(--navy);
-    }
-    .contact-links a:hover{background:var(--soft)}
-
-    footer{
-      padding:22px 0 36px;
-      color:#7a8592;
-      font-size:14px;
-      border-top:1px solid rgba(17,40,62,.08);
-      margin-top:10px;
+    .navlinks a:hover {
+      color: var(--navy2)
     }
 
-    [data-lang],[data-lang-block],[data-lang-flex],[data-lang-inline]{display:none}
-    html.lang-th [data-lang="th"]{display:inline}
-    html.lang-en [data-lang="en"]{display:inline}
-    html.lang-th [data-lang-block="th"]{display:block}
-    html.lang-en [data-lang-block="en"]{display:block}
-    html.lang-th [data-lang-flex="th"]{display:flex}
-    html.lang-en [data-lang-flex="en"]{display:flex}
-    html.lang-th [data-lang-inline="th"]{display:inline-block}
-    html.lang-en [data-lang-inline="en"]{display:inline-block}
-
-    @media (max-width: 980px){
-      .hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}
-      .hero-body,.side-card,.card,.project-body,.contact-box{padding:22px}
+    .lang-switch {
+      display: inline-flex;
+      padding: 4px;
+      gap: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: var(--shadow)
     }
 
-    @media (max-width: 680px){
-      .nav{flex-direction:column;align-items:flex-start}
-      .nav-right{width:100%;justify-content:space-between}
-      .hero{padding-top:28px}
-      .subtitle{font-size:18px}
-      .lead{font-size:16px}
-      .btn{width:100%}
-      .hero-actions{flex-direction:column}
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: .2s ease
+    }
+
+    .lang-btn.active {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .hero {
+      padding: 38px 0 24px
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr .95fr;
+      gap: 22px;
+      align-items: stretch
+    }
+
+    .paper {
+      background: var(--paper);
+      border: 1px solid #e1e7ee;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden
+    }
+
+    .hero-card {
+      padding: 0
+    }
+
+    .hero-head {
+      height: 12px;
+      background: linear-gradient(90deg, var(--navy), var(--navy2));
+    }
+
+    .hero-body {
+      padding: 34px 34px 30px
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: #7a5b1a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .9px;
+      text-transform: uppercase;
+      margin-bottom: 16px
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: .98;
+      letter-spacing: -.035em;
+      color: var(--ink)
+    }
+
+    .subtitle {
+      margin: 0 0 16px;
+      font-size: 22px;
+      line-height: 1.25;
+      color: var(--navy2);
+      font-weight: 800
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.72;
+      max-width: 780px
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: .2s ease;
+      border: 1px solid transparent
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--navy), var(--navy2));
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px)
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border-color: var(--line);
+      color: var(--navy)
+    }
+
+    .btn-secondary:hover {
+      background: var(--soft)
+    }
+
+    .side-card {
+      padding: 26px 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .mini-label {
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #7a8592;
+      font-weight: 800
+    }
+
+    .stat {
+      padding: 14px 0;
+      border-bottom: 1px solid #e6ebf2
+    }
+
+    .stat:last-child {
+      border-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.05;
+      margin-bottom: 6px;
+      color: var(--navy)
+    }
+
+    .stat span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--muted)
+    }
+
+    section {
+      padding: 14px 0
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--navy);
+      font-weight: 800
+    }
+
+    .section-title::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--gold)
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .card {
+      padding: 24px 24px 22px
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.2;
+      color: var(--ink)
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.68
+    }
+
+    .list {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 18px;
+      margin: 10px 0;
+      color: #334155;
+      line-height: 1.62
+    }
+
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--gold)
+    }
+
+    .project {
+      padding: 0
+    }
+
+    .project-body {
+      padding: 24px
+    }
+
+    .project h4 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+      color: var(--ink)
+    }
+
+    .project p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.68
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: #344256;
+      font-size: 12px;
+      font-weight: 700
+    }
+
+    .callout {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 22px 24px
+    }
+
+    .callout p {
+      margin: 0 0 10px;
+      color: #334155;
+      line-height: 1.68
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0
+    }
+
+    .contact-box {
+      padding: 30px;
+      background: linear-gradient(180deg, #fff, #f8fafc);
+      border: 1px solid #dfe5ec;
+      border-radius: 24px;
+      box-shadow: var(--shadow)
+    }
+
+    .contact-box h3 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+      color: var(--navy)
+    }
+
+    .contact-box p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 820px
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    .contact-links a {
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy)
+    }
+
+    .contact-links a:hover {
+      background: var(--soft)
+    }
+
+    footer {
+      padding: 22px 0 36px;
+      color: #7a8592;
+      font-size: 14px;
+      border-top: 1px solid rgba(17, 40, 62, .08);
+      margin-top: 10px
+    }
+
+    html.lang-th .lang-content,
+    html.lang-en .lang-content {
+      display: none
+    }
+
+    html.lang-th .lang-content.lang-th,
+    html.lang-en .lang-content.lang-en {
+      display: initial
+    }
+
+    html.lang-th .block-th {
+      display: block
+    }
+
+    html.lang-en .block-en {
+      display: block
+    }
+
+    html.lang-th .flex-th {
+      display: flex
+    }
+
+    html.lang-en .flex-en {
+      display: flex
+    }
+
+    html.lang-th .grid-th {
+      display: grid
+    }
+
+    html.lang-en .grid-en {
+      display: grid
+    }
+
+    html.lang-th .inline-th {
+      display: inline-block
+    }
+
+    html.lang-en .inline-en {
+      display: inline-block
+    }
+
+    @media (max-width: 980px) {
+
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr
+      }
+
+      .hero-body,
+      .side-card,
+      .card,
+      .project-body,
+      .contact-box {
+        padding: 22px
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: space-between
+      }
+
+      .hero {
+        padding-top: 28px
+      }
+
+      .subtitle {
+        font-size: 18px
+      }
+
+      .lead {
+        font-size: 16px
+      }
+
+      .btn {
+        width: 100%
+      }
+
+      .hero-actions {
+        flex-direction: column
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="ribbon"></div>
   <div class="topbar">
     <div class="wrap nav">
-      <div class="brand">Korawit <span>Insoi</span></div>
+      <div class="brand lang-content lang-th">กรวิทย์ <span>อินทร์สร้อย</span></div>
+      <div class="brand lang-content lang-en">Korawit <span>Insoi</span></div>
       <div class="nav-right">
-        <nav class="navlinks">
-          <a href="#value"><span data-lang="th">คุณค่า</span><span data-lang="en">Value</span></a>
-          <a href="#projects"><span data-lang="th">ผลงาน</span><span data-lang="en">Projects</span></a>
-          <a href="#capabilities"><span data-lang="th">ความสามารถ</span><span data-lang="en">Capabilities</span></a>
-          <a href="#contact"><span data-lang="th">ติดต่อ</span><span data-lang="en">Contact</span></a>
-        </nav>
+        <!-- <nav class="navlinks">
+          <a href="#value"><span class="lang-content lang-th">คุณค่าที่ส่งมอบ</span><span
+              class="lang-content lang-en">Value</span></a>
+          <a href="#projects"><span class="lang-content lang-th">ผลงานเด่น</span><span
+              class="lang-content lang-en">Projects</span></a>
+          <a href="#capabilities"><span class="lang-content lang-th">ความสามารถหลัก</span><span
+              class="lang-content lang-en">Capabilities</span></a>
+          <a href="#contact"><span class="lang-content lang-th">ติดต่อ</span><span
+              class="lang-content lang-en">Contact</span></a>
+        </nav> -->
         <div class="lang-switch" aria-label="Language switcher">
           <button class="lang-btn active" id="btn-th" type="button">ไทย</button>
           <button class="lang-btn" id="btn-en" type="button">EN</button>
@@ -301,86 +586,137 @@
           <div class="hero-head"></div>
           <div class="hero-body">
             <div class="eyebrow">
-              <span data-lang="th">Technical Leadership • Architecture • Delivery</span>
-              <span data-lang="en">Technical Leadership • Architecture • Delivery</span>
+              <span class="lang-content lang-th">ภาวะผู้นำทางเทคนิค • สถาปัตยกรรมระบบ • การส่งมอบแบบ end-to-end</span>
+              <span class="lang-content lang-en">Technical Leadership • System Architecture • End-to-End Delivery</span>
             </div>
             <h1>Korawit Insoi</h1>
             <div class="subtitle">
-              <span data-lang="th">Technical Lead / Solution Architect</span>
-              <span data-lang="en">Technical Lead / Solution Architect</span>
+              <span class="lang-content lang-th">Technical Lead / Solution Architect</span>
+              <span class="lang-content lang-en">Technical Lead / Solution Architect</span>
             </div>
             <p class="lead">
-              <span data-lang="th">ผมออกแบบและส่งมอบระบบดิจิทัลที่ขยายต่อได้ โดยเปลี่ยนความต้องการทางธุรกิจให้กลายเป็นระบบที่ปลอดภัย ดูแลรักษาง่าย และพร้อมใช้งานจริงในระดับ production ด้วยประสบการณ์มากกว่า 12 ปี ครอบคลุม backend, frontend, database, mobile และ automation ผมทำได้ทั้งมุมสถาปัตยกรรมระบบและการลงมือทำจริง</span>
-              <span data-lang="en">I design and deliver scalable digital systems that turn business requirements into secure, maintainable, and production-ready products. With 12+ years of experience across backend, frontend, database, mobile, and automation, I bring both architectural depth and hands-on execution.</span>
+              <span class="lang-content lang-th">Technical Lead / Solution Architect ที่มีประสบการณ์มากกว่า 12 ปี
+                ในการส่งมอบระบบที่สำคัญต่อการดำเนินงานขององค์กร ครอบคลุม backend, web, database, mobile และ automation
+                เชื่อมโจทย์ธุรกิจ สถาปัตยกรรมระบบ และการลงมือพัฒนาจริงให้กลายเป็นระบบที่พร้อมใช้งานจริง</span>
+              <span class="lang-content lang-en">Technical Lead / Solution Architect with 12+ years of experience
+                delivering business-critical systems across backend, web, database, mobile, and automation. I connect
+                business requirements, system architecture, and hands-on execution to deliver production-ready
+                systems.</span>
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects"><span data-lang="th">ดูผลงานเด่น</span><span data-lang="en">View Selected Work</span></a>
-              <a class="btn btn-secondary" href="mailto:YOUR_EMAIL"><span data-lang="th">ติดต่อผม</span><span data-lang="en">Contact Me</span></a>
+              <a class="btn btn-primary" href="#projects"><span class="lang-content lang-th">ดูผลงานเด่น</span><span
+                  class="lang-content lang-en">View Selected Work</span></a>
+              <a class="btn btn-secondary" href="mailto:YOUR_EMAIL"><span
+                  class="lang-content lang-th">ติดต่อผม</span><span class="lang-content lang-en">Contact Me</span></a>
             </div>
           </div>
         </article>
 
         <aside class="paper side-card">
-          <div class="mini-label"><span data-lang="th">ภาพรวมโปรไฟล์</span><span data-lang="en">Professional Snapshot</span></div>
+          <div class="mini-label"><span class="lang-content lang-th">ภาพรวมผู้สมัคร</span><span
+              class="lang-content lang-en">Executive Profile</span></div>
 
           <div class="stat">
-            <strong><span data-lang="th">12+ ปี</span><span data-lang="en">12+ Years</span></strong>
-            <span><span data-lang="th">สร้างระบบธุรกิจ แพลตฟอร์ม และแอปพร้อมใช้งานจริงมาตั้งแต่ปี 2013</span><span data-lang="en">Building business systems, platforms, and production-ready applications since 2013.</span></span>
+            <strong><span class="lang-content lang-th">ประสบการณ์ส่งมอบงานจริง 12+ ปี</span><span
+                class="lang-content lang-en">12+ Years in Production Delivery</span></strong>
+            <span><span class="lang-content lang-th">มีประสบการณ์ต่อเนื่องในการส่งมอบระบบธุรกิจ แพลตฟอร์มภายใน
+                และผลิตภัณฑ์ดิจิทัลมาตั้งแต่ปี 2013</span><span class="lang-content lang-en">Track record delivering
+                business systems, internal platforms, and digital products since 2013.</span></span>
           </div>
 
           <div class="stat">
-            <strong><span data-lang="th">ดูแลงานได้ครบวงจร</span><span data-lang="en">End-to-End Ownership</span></strong>
-            <span><span data-lang="th">ตั้งแต่ solution design และ technical architecture ไปจนถึง implementation, optimization และ delivery</span><span data-lang="en">From solution design and technical architecture to implementation, optimization, and delivery.</span></span>
+            <strong><span class="lang-content lang-th">ภาวะผู้นำและความรับผิดชอบเชิงเทคนิค</span><span
+                class="lang-content lang-en">Technical Leadership & Ownership</span></strong>
+            <span><span class="lang-content lang-th">ดูแลงานได้ตั้งแต่ requirement การตัดสินใจเชิงสถาปัตยกรรม
+                implementation การเพิ่มประสิทธิภาพ และความพร้อมก่อนใช้งานจริง</span><span
+                class="lang-content lang-en">Owns the path from requirements and architecture decisions to
+                implementation, optimization, and go-live readiness.</span></span>
           </div>
 
           <div class="stat">
-            <strong><span data-lang="th">ครอบคลุมหลายสแตก</span><span data-lang="en">Cross-Stack Strength</span></strong>
-            <span><span data-lang="th">Backend, frontend, database, mobile, integration และ engineering automation</span><span data-lang="en">Backend, frontend, database, mobile, integration, and engineering automation.</span></span>
+            <strong><span class="lang-content lang-th">ออกแบบและลงมือทำได้หลายชั้น</span><span
+                class="lang-content lang-en">Cross-Stack Architecture</span></strong>
+            <span><span class="lang-content lang-th">ครอบคลุม backend, frontend, database, mobile, integration และ
+                automation พร้อมโครงสร้างระบบที่ดูแลต่อได้</span><span class="lang-content lang-en">Hands-on across
+                backend, frontend, database, mobile, integration, and automation with maintainable system
+                design.</span></span>
           </div>
 
           <div class="stat">
-            <strong><span data-lang="th">สไตล์การทำงาน</span><span data-lang="en">Leadership Style</span></strong>
-            <span><span data-lang="th">Hands-on, practical และโฟกัสกับระบบที่ใช้งานได้จริง ไม่ใช่แค่สวยบนสไลด์</span><span data-lang="en">Hands-on, practical, and focused on systems that work well beyond the whiteboard.</span></span>
+            <strong><span class="lang-content lang-th">ความเหมาะสมกับองค์กร</span><span
+                class="lang-content lang-en">Organizational Fit</span></strong>
+            <span><span class="lang-content lang-th">ทำงานได้ดีในจุดตัดระหว่างบริบทธุรกิจ สถาปัตยกรรมระบบ
+                และการลงมือพัฒนาจริง โดยยึดผลลัพธ์การส่งมอบเป็นหลัก</span><span class="lang-content lang-en">Works
+                effectively at the intersection of business context, system architecture, and engineering execution,
+                with a practical delivery mindset.</span></span>
           </div>
         </aside>
       </div>
     </section>
 
     <section id="value">
-      <div class="section-title"><span data-lang="th">คุณค่าที่ส่งมอบ</span><span data-lang="en">Value Proposition</span></div>
+      <div class="section-title"><span class="lang-content lang-th">คุณค่าที่ส่งมอบ</span><span
+          class="lang-content lang-en">Value Proposition</span></div>
       <div class="grid-2">
         <article class="paper card">
-          <h3><span data-lang="th">สิ่งที่ผมส่งมอบ</span><span data-lang="en">What I Deliver</span></h3>
+          <h3><span class="lang-content lang-th">สิ่งที่องค์กรจะได้รับ</span><span class="lang-content lang-en">What
+              Organizations Get</span></h3>
           <ul class="list">
-            <li><span data-lang="th">สถาปัตยกรรมและรากฐานทางเทคนิคสำหรับระบบธุรกิจที่ขยายต่อได้</span><span data-lang="en">Architecture and technical foundations for scalable business systems</span></li>
-            <li><span data-lang="th">การส่งมอบผลิตภัณฑ์แบบครบวงจร ครอบคลุม web, backend, database และ mobile</span><span data-lang="en">End-to-end product delivery across web, backend, database, and mobile</span></li>
-            <li><span data-lang="th">ระบบที่ออกแบบโดยให้ความสำคัญกับ performance, reliability และ maintainability</span><span data-lang="en">Performance-focused systems designed for reliability and maintainability</span></li>
-            <li><span data-lang="th">การนำงานเชิงเทคนิคแบบลงมือทำจริง ตั้งแต่ solution design จนถึง production deployment</span><span data-lang="en">Hands-on leadership from solution design to production deployment</span></li>
+            <li><span
+                class="lang-content lang-th">สถาปัตยกรรมและโครงสร้างระบบสำหรับระบบธุรกิจที่ขยายต่อได้และดูแลต่อได้</span><span
+                class="lang-content lang-en">Architecture and system foundations for scalable, maintainable business
+                systems</span></li>
+            <li><span class="lang-content lang-th">การส่งมอบแบบ end-to-end ตั้งแต่ requirement ไปจนถึง production
+                readiness</span><span class="lang-content lang-en">End-to-end delivery from requirements to production
+                readiness</span></li>
+            <li><span class="lang-content lang-th">การตัดสินใจเชิงเทคนิคที่คำนึงถึงความเสถียร ประสิทธิภาพ
+                และการดูแลระยะยาว</span><span class="lang-content lang-en">Technical decisions grounded in reliability,
+                performance, and long-term maintainability</span></li>
+            <li><span class="lang-content lang-th">การเชื่อมโจทย์ธุรกิจกับ implementation ที่พร้อมใช้งานจริง</span><span
+                class="lang-content lang-en">Practical translation of business requirements into working systems</span>
+            </li>
           </ul>
         </article>
 
         <article class="paper card">
-          <h3><span data-lang="th">โฟกัสหลัก</span><span data-lang="en">Focus Areas</span></h3>
+          <h3><span class="lang-content lang-th">ขอบเขตที่ถนัด</span><span class="lang-content lang-en">Focus
+              Areas</span></h3>
           <ul class="list">
-            <li><span data-lang="th">Technical leadership, architecture และ scalable system design</span><span data-lang="en">Technical leadership, architecture, and scalable system design</span></li>
-            <li><span data-lang="th">Business platforms, reporting workflows และ operational software</span><span data-lang="en">Business platforms, reporting workflows, and operational software</span></li>
-            <li><span data-lang="th">การพัฒนา mobile product ด้วย SwiftUI แบบเน้นประสบการณ์ผู้ใช้</span><span data-lang="en">Product-focused mobile development with SwiftUI</span></li>
-            <li><span data-lang="th">Automation, internal tooling และ engineering productivity</span><span data-lang="en">Automation, internal tooling, and engineering productivity</span></li>
+            <li><span class="lang-content lang-th">Technical Lead / Solution Architect
+                สำหรับระบบองค์กรและผลิตภัณฑ์ดิจิทัล</span><span class="lang-content lang-en">Technical Lead / Solution
+                Architect roles for enterprise systems and digital products</span></li>
+            <li><span class="lang-content lang-th">แพลตฟอร์มธุรกิจ ระบบรายงาน
+                และซอฟต์แวร์สำหรับทีมปฏิบัติการ</span><span class="lang-content lang-en">Business platforms, reporting
+                workflows, and software for operational teams</span></li>
+            <li><span class="lang-content lang-th">การออกแบบระบบหลายชั้น ครอบคลุม web, backend, database, mobile และ
+                integration</span><span class="lang-content lang-en">Cross-stack system design across web, backend,
+                database, mobile, and integration</span></li>
+            <li><span class="lang-content lang-th">Automation, internal tooling
+                และการเพิ่มประสิทธิภาพงานวิศวกรรม</span><span class="lang-content lang-en">Automation, internal tooling,
+                and engineering productivity</span></li>
           </ul>
         </article>
       </div>
     </section>
 
     <section id="projects">
-      <div class="section-title"><span data-lang="th">ผลงานเด่น</span><span data-lang="en">Selected Projects</span></div>
+      <div class="section-title"><span class="lang-content lang-th">ผลงานเด่น</span><span
+          class="lang-content lang-en">Selected Projects</span></div>
       <div class="grid-3">
         <article class="paper project">
           <div class="hero-head"></div>
           <div class="project-body">
-            <h4>Stock Reporter / Business Operations Platform</h4>
-            <p><span data-lang="th">ออกแบบและส่งมอบแพลตฟอร์มรายงานธุรกิจ ครอบคลุม API architecture, database workflows, authentication, reporting processes และ frontend experience เพื่อรองรับงานรายงานเชิงปฏิบัติการและการตัดสินใจ</span><span data-lang="en">Designed and delivered a business reporting platform covering API architecture, database workflows, authentication, reporting processes, and frontend experience for operational reporting and decision support.</span></p>
+            <h4><span class="lang-content lang-th">Stock Reporter / แพลตฟอร์มงานปฏิบัติการทางธุรกิจ</span><span
+                class="lang-content lang-en">Stock Reporter / Business Operations Platform</span></h4>
+            <p><span class="lang-content lang-th">ออกแบบและส่งมอบแพลตฟอร์มรายงานธุรกิจ ครอบคลุมสถาปัตยกรรม API
+                กระบวนการทำงานของฐานข้อมูล ระบบยืนยันตัวตน เวิร์กโฟลว์รายงาน และประสบการณ์ใช้งานฝั่งหน้าจอ
+                เพื่อรองรับงานรายงานเชิงปฏิบัติการและการตัดสินใจ</span><span class="lang-content lang-en">Designed and
+                delivered a business reporting platform covering API architecture, database workflows, authentication,
+                reporting processes, and frontend experience for operational reporting and decision support.</span></p>
             <div class="tags">
-              <span class="tag">Node.js</span><span class="tag">Next.js</span><span class="tag">SQL Server</span><span class="tag">Architecture</span>
+              <span class="tag">Node.js</span><span class="tag">Next.js</span><span class="tag">SQL Server</span><span
+                class="tag"><span class="lang-content lang-th">สถาปัตยกรรม</span><span
+                  class="lang-content lang-en">Architecture</span></span>
             </div>
           </div>
         </article>
@@ -388,10 +724,17 @@
         <article class="paper project">
           <div class="hero-head"></div>
           <div class="project-body">
-            <h4>GoThai / iOS Travel Product</h4>
-            <p><span data-lang="th">พัฒนาแอปท่องเที่ยวบน iOS/iPadOS ที่ขับเคลื่อนด้วยแผนที่ รองรับการวางแผนทริป การแสดงเส้นทาง สรุปการเดินทาง และการจัดการข้อมูลแบบ local-first โดยเน้น product experience</span><span data-lang="en">Built a map-driven iOS/iPadOS travel application for trip planning, route visualization, summaries, and local-first data management with a product-focused user experience.</span></p>
+            <h4><span class="lang-content lang-th">GoThai / ผลิตภัณฑ์ท่องเที่ยวบน iOS</span><span
+                class="lang-content lang-en">GoThai / iOS Travel Product</span></h4>
+            <p><span class="lang-content lang-th">พัฒนาแอปท่องเที่ยวบน iOS และ iPadOS ที่ขับเคลื่อนด้วยแผนที่
+                รองรับการวางแผนทริป การแสดงเส้นทาง สรุปการเดินทาง และการจัดการข้อมูลแบบเก็บไว้ในเครื่องเป็นหลัก
+                โดยเน้นประสบการณ์ใช้งานเชิงผลิตภัณฑ์</span><span class="lang-content lang-en">Built a map-driven
+                iOS/iPadOS travel application for trip planning, route visualization, summaries, and local-first data
+                management with a product-focused user experience.</span></p>
             <div class="tags">
-              <span class="tag">SwiftUI</span><span class="tag">SwiftData</span><span class="tag">MapKit</span><span class="tag">Product Design</span>
+              <span class="tag">SwiftUI</span><span class="tag">SwiftData</span><span class="tag">MapKit</span><span
+                class="tag"><span class="lang-content lang-th">ออกแบบผลิตภัณฑ์</span><span
+                  class="lang-content lang-en">Product Design</span></span>
             </div>
           </div>
         </article>
@@ -399,10 +742,19 @@
         <article class="paper project">
           <div class="hero-head"></div>
           <div class="project-body">
-            <h4>Rally / Event Tracking Platform</h4>
-            <p><span data-lang="th">วาง product และ system concept สำหรับแพลตฟอร์มติดตามกิจกรรม รองรับ route setup, GPS visibility, stage management และการติดตามผู้เข้าร่วมแบบ real-time</span><span data-lang="en">Created the product and system concept for an event tracking platform supporting route setup, GPS visibility, stage management, and real-time participant monitoring.</span></p>
+            <h4><span class="lang-content lang-th">Rally / แพลตฟอร์มติดตามกิจกรรม</span><span
+                class="lang-content lang-en">Rally / Event Tracking Platform</span></h4>
+            <p><span class="lang-content lang-th">วางแนวคิดผลิตภัณฑ์และระบบสำหรับแพลตฟอร์มติดตามกิจกรรม
+                รองรับการกำหนดเส้นทาง การมองเห็นตำแหน่งจาก GPS การจัดการด่านหรือจุดกิจกรรม
+                และการติดตามผู้เข้าร่วมแบบเรียลไทม์</span><span class="lang-content lang-en">Created the product and
+                system concept for an event tracking platform supporting route setup, GPS visibility, stage management,
+                and real-time participant monitoring.</span></p>
             <div class="tags">
-              <span class="tag">GPS Tracking</span><span class="tag">Realtime Systems</span><span class="tag">Product Strategy</span><span class="tag">System Design</span>
+              <span class="tag">GPS</span><span class="tag"><span class="lang-content lang-th">ระบบเรียลไทม์</span><span
+                  class="lang-content lang-en">Realtime Systems</span></span><span class="tag"><span
+                  class="lang-content lang-th">กลยุทธ์ผลิตภัณฑ์</span><span class="lang-content lang-en">Product
+                  Strategy</span></span><span class="tag"><span class="lang-content lang-th">ออกแบบระบบ</span><span
+                  class="lang-content lang-en">System Design</span></span>
             </div>
           </div>
         </article>
@@ -410,49 +762,77 @@
     </section>
 
     <section id="capabilities">
-      <div class="section-title"><span data-lang="th">ความสามารถหลัก</span><span data-lang="en">Core Capabilities</span></div>
+      <div class="section-title"><span class="lang-content lang-th">ความสามารถหลัก</span><span
+          class="lang-content lang-en">Core Capabilities</span></div>
       <div class="grid-2">
         <article class="paper card">
-          <h3><span data-lang="th">ความลึกด้านเทคนิค</span><span data-lang="en">Technical Depth</span></h3>
-          <p><span data-lang="th">มีประสบการณ์แข็งแรงในด้าน backend engineering, API development, frontend applications, relational databases, mobile applications และ solution architecture โดยยึดแนวทางที่เน้นการใช้งานจริงและการส่งมอบงานได้จริง</span><span data-lang="en">Strong experience across backend engineering, API development, frontend applications, relational databases, mobile applications, and solution architecture with a practical approach to delivery.</span></p>
+          <h3><span class="lang-content lang-th">ความลึกด้านเทคนิค</span><span class="lang-content lang-en">Technical
+              Depth</span></h3>
+          <p><span class="lang-content lang-th">มีประสบการณ์ครอบคลุม backend engineering, API development, frontend
+              applications, relational databases, mobile applications และ solution architecture
+              สำหรับระบบที่ต้องใช้งานจริงในองค์กร</span><span class="lang-content lang-en">Strong experience across
+              backend engineering, API development, frontend applications, relational databases, mobile applications,
+              and solution architecture for real-world organizational systems.</span></p>
         </article>
 
         <article class="paper card">
-          <h3><span data-lang="th">แนวคิดในการส่งมอบงาน</span><span data-lang="en">Execution Mindset</span></h3>
-          <p><span data-lang="th">ทำงานได้ตั้งแต่ business requirement ไปจนถึง production deployment โดยรักษาสมดุลระหว่าง system design, implementation detail, performance, maintainability และ real-world usability</span><span data-lang="en">Comfortable working from business requirement to production deployment, balancing system design, implementation detail, performance, maintainability, and real-world usability.</span></p>
+          <h3><span class="lang-content lang-th">แนวคิดในการส่งมอบงาน</span><span class="lang-content lang-en">Execution
+              Mindset</span></h3>
+          <p><span class="lang-content lang-th">ทำงานได้ตั้งแต่การตีโจทย์จากฝั่งธุรกิจและผู้มีส่วนเกี่ยวข้อง
+              ไปจนถึงการตัดสินใจเชิงสถาปัตยกรรม implementation detail การเพิ่มประสิทธิภาพ
+              และการนำขึ้นใช้งานจริง</span><span class="lang-content lang-en">Comfortable working from business and
+              stakeholder requirements through architecture decisions, implementation detail, optimization, and
+              production deployment.</span></p>
         </article>
       </div>
     </section>
 
     <section>
-      <div class="section-title"><span data-lang="th">ภาพลักษณ์ระดับผู้สมัคร</span><span data-lang="en">Executive Positioning</span></div>
+      <div class="section-title"><span class="lang-content lang-th">บทบาทเป้าหมาย</span><span
+          class="lang-content lang-en">Target Roles</span></div>
       <div class="paper callout">
-        <p><strong><span data-lang="th">Technical Lead / Solution Architect</span><span data-lang="en">Technical Lead / Solution Architect</span></strong></p>
-        <p><span data-lang="th">โปรไฟล์นี้ถูกวางไว้สำหรับงานที่ต้องการคนซึ่งเชื่อม business context, architecture choices และ execution detail เข้าด้วยกันได้โดยไม่หลุดจากความจริงในการส่งมอบงาน</span><span data-lang="en">This profile is positioned for roles that expect someone who can move between business context, architecture choices, and execution detail without losing delivery focus.</span></p>
-        <p><span data-lang="th">ไม่ใช่การขายตัวเองเป็น generic programmer แต่เน้นงานมูลค่าสูง: architecture judgment, hands-on delivery, performance-sensitive systems และ practical ownership</span><span data-lang="en">It is intentionally not framed as a generic programmer profile, but around higher-value work: architecture judgment, hands-on delivery, performance-sensitive systems, and practical ownership.</span></p>
+        <p><strong><span class="lang-content lang-th">Technical Lead / Solution Architect</span><span
+              class="lang-content lang-en">Technical Lead / Solution Architect</span></strong></p>
+        <p><span class="lang-content lang-th">โปรไฟล์นี้เหมาะกับองค์กรที่ต้องการคนซึ่งเชื่อม requirement ทางธุรกิจ
+            การตัดสินใจเชิงสถาปัตยกรรม และการลงมือพัฒนาจริงเข้าด้วยกันได้ พร้อมรับผิดชอบการส่งมอบแบบ
+            end-to-end</span><span class="lang-content lang-en">This profile is best aligned with organizations that
+            need someone who can connect business requirements, architecture decisions, and hands-on engineering with
+            end-to-end delivery ownership.</span></p>
+        <p><span class="lang-content lang-th">บทบาทที่เหมาะคือ Technical Lead, Solution Architect และสาย senior platform
+            หรือ product engineering ที่ต้องการ ownership ครบวงจรและการตัดสินใจเชิงเทคนิคที่ใช้งานได้จริง</span><span
+            class="lang-content lang-en">Best-fit roles include Technical Lead, Solution Architect, and senior platform
+            or product engineering positions that require end-to-end ownership and practical technical judgment.</span>
+        </p>
       </div>
     </section>
 
     <section id="contact">
-      <div class="section-title"><span data-lang="th">ติดต่อ</span><span data-lang="en">Contact</span></div>
+      <div class="section-title"><span class="lang-content lang-th">ติดต่อ</span><span
+          class="lang-content lang-en">Contact</span></div>
       <div class="contact-box">
-        <h3><span data-lang="th">เปิดรับโอกาสที่เหมาะสมด้าน technical leadership และ architecture</span><span data-lang="en">Open to selected technical leadership and architecture opportunities.</span></h3>
-        <p><span data-lang="th">ผมพร้อมพูดคุยเรื่อง leadership, architecture, product engineering และ consulting ในงานที่ให้คุณค่ากับความลึกทางเทคนิค การลงมือทำจริง และความรับผิดชอบต่อการส่งมอบงาน</span><span data-lang="en">I am available for leadership, architecture, product engineering, and consulting discussions where technical depth, hands-on execution, and delivery ownership are valued.</span></p>
+        <h3><span class="lang-content lang-th">เปิดรับบทบาท Technical Lead / Solution Architect และสาย senior
+            engineering ที่ดูแลการส่งมอบได้จริง</span><span class="lang-content lang-en">Open to Technical Lead,
+            Solution Architect, and senior engineering roles with real delivery ownership.</span></h3>
+        <p><span class="lang-content lang-th">พร้อมพูดคุยกับองค์กรที่ต้องการคนซึ่งดูแลได้ตั้งแต่ requirement และ
+            architecture ไปจนถึง implementation และ production readiness โดยเฉพาะงานระบบธุรกิจ แพลตฟอร์มภายใน
+            และผลิตภัณฑ์ดิจิทัล</span><span class="lang-content lang-en">Available for organizations that need someone
+            who can work from requirements and architecture through implementation and production readiness, especially
+            for business systems, internal platforms, and digital products.</span></p>
         <div class="contact-links">
-          <a href="mailto:YOUR_EMAIL">Email: keng.kmee@gmail.com</a>
-          <--<a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>-->
+          <a href="mailto:keng.kmee@gmail.com">Email: keng.kmee@gmail.com</a>
+          <!-- <a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a> -->
           <a href="https://github.com/keng-korawit" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://keng-korawit.github.io" target="_blank" rel="noreferrer">Portfolio Site</a>
+          <a href="https://keng-korawit.github.io" target="_blank" rel="noreferrer"><span
+              class="lang-content lang-th">เว็บไซต์ผลงาน</span><span class="lang-content lang-en">Portfolio
+              Site</span></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      <span data-lang="th">© Korawit Insoi. สงวนลิขสิทธิ์</span>
-      <span data-lang="en">© Korawit Insoi. All rights reserved.</span>
-    </div>
+    <div class="wrap"><span class="lang-content lang-th">© Korawit Insoi. สงวนลิขสิทธิ์</span><span
+        class="lang-content lang-en">© Korawit Insoi. All rights reserved.</span></div>
   </footer>
 
   <script>
@@ -476,4 +856,5 @@
     setLanguage(savedLang === 'en' ? 'en' : 'th');
   </script>
 </body>
+
 </html>
